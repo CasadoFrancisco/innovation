@@ -1,8 +1,11 @@
+import { Members } from '../components/Members';
+
 const Home = () => {
-  return (
-    <div>
-        DevBees
-    </div>
-  )
-}
-export default Home
+	return (
+		<div>
+			DevBees
+			<Members />
+		</div>
+	);
+};
+export default Home;
