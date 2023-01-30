@@ -43,7 +43,7 @@ const Nav = styled.nav`
   
   @media (max-width: 767px) {
     transform: translateY(${ props => props.isOpen ? "0vh" : "-100vh" });
-    transition: 1s;
+    transition: 0.5s;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
@@ -68,9 +68,9 @@ const Navbar = () => {
 
       {!isOpen ? <BotonMenu onClick={() => setOpen(!isOpen)} /> : null}
       <Nav isOpen={isOpen}>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a onClick={() => setOpen(false)} href="#home">Home</a>
+        <a onClick={() => setOpen(false)} href="#about">About</a>
+        <a onClick={() => setOpen(false)} href="#members">Members</a>
         <Button onClick={() => setOpen(false)}>X</Button>
       </Nav>
 
