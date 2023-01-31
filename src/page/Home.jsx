@@ -1,12 +1,14 @@
-import Hero from "../components/Hero"
+import Hero from '../components/Hero';
 import { Members } from '../components/Members';
+import { Footer } from '../components/Footer';
 
 const Home = () => {
-  return (
-    <div>
-        <Hero/>
-        <Members />
-    </div>
-  )
-}
-export default Home
+	return (
+		<div>
+			<Hero />
+			<Members />
+			<Footer />
+		</div>
+	);
+};
+export default Home;
