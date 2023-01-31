@@ -125,7 +125,7 @@ const SocialMedia = styled.div`
 
 export const Members = () => {
 	return (
-		<Section>
+		<Section id='members'>
 			<Container>
 				<TitleContainer>
 					<Vector></Vector>

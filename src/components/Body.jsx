@@ -391,7 +391,7 @@ const ParagraphInf = styled.p`
 
 const Body = () => {
   return (
-    <DivBody>
+    <DivBody id='about'>
       <DivImag>
         <DivImgSuperior>
           <ImgSuperior1 src={fotoSuperior1} />
