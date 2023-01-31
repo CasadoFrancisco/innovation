@@ -5,8 +5,8 @@ import fotoSuperior2 from "../assets/fotosuperiorr2.png";
 import fotoinferior from "../assets/fotoinferior.png";
 
 const DivBody = styled.div`
-@media (max-width:767px){
-  width: 100%;
+ @media (max-width:767px){
+  width:100vw;
   height: 100%;
   margin-left: 2px;
   margin-right: 2px;
@@ -15,36 +15,71 @@ const DivBody = styled.div`
   align-items: center;
   flex-direction: column;
 }
+
+@media (min-width:768px){
+  margin-top: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
   
 `;
 const DivImag = styled.div`
-@media (max-width:767px){
+ @media (max-width:767px){
   display: flex;
+  
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
-  width: 390px;
+  width: 100vw;
   height: 530px;
+} 
+
+@media (min-width:768px){
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  height: 100%;
 }
   
 `;
 const DivImgSuperior = styled.div`
-@media (max-width:767px){
+ @media (max-width:767px){
+  position: relative;
+} 
+@media (min-width:768px){
   position: relative;
 }
-  
 `;
 const ImgSuperior1 = styled.img`
-@media (max-width:767px){
+ @media (max-width:767px){
   width: 281px;
   height: 324.82px;
+} 
+@media (min-width:768px){
+  width: 374px;
+  height: 430px;
 }
   
 `;
 const ImgSuperior2 = styled.img`
-@media (max-width:767px){
+ @media (max-width:767px){
   width: 281px;
   height: 324.82px;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+} 
+@media (min-width:768px){
+  width: 374px;
+  height: 430px;
   position: absolute;
   z-index: 0;
   top: 0;
@@ -53,28 +88,37 @@ const ImgSuperior2 = styled.img`
   
 `;
 const DivImgInferior = styled.div`
-@media (max-width:767px){
+ @media (max-width:767px){
   position: absolute;
   bottom: 0;
   right: 0;
+} 
+@media (min-width:768px){
+  margin-left: 35px;
 }
   
 `;
 
 const ImgInferior = styled.img`
-@media (max-width:767px){
+ @media (max-width:767px){
   width: 238.47px;
   height: 307px;
   margin-left: 20px;
+} 
+@media (min-width:768px){
+  width: 374px;
+  height: 430px;
 }
   
 `;
 
 const DivContainerInfo = styled.div`
+  @media (min-width:768px){
   
+}
 `;
 const DivContainerSubTitle = styled.div`
-@media (max-width:767px){
+ @media (max-width:767px){
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -82,11 +126,30 @@ const DivContainerSubTitle = styled.div`
   height: 40px;
   margin-left: 1px;
   margin-top: 10px;
+} 
+@media (min-width:768px){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 20px;
+  height: 40px;
+ 
+  margin-top: 30px;
+  
+  
 }
   
 `;
 const SubTitleLine = styled.hr`
-@media (max-width:767px){
+ @media (max-width:767px){
+  width: 39px;
+  margin-left: 10px;
+  background-image: linear-gradient(to bottom, #e2e70f, #ff06b9);
+  height: 2px;
+  border: none; 
+} 
+@media (min-width:768px){
   width: 39px;
   margin-left: 10px;
   background-image: linear-gradient(to bottom, #e2e70f, #ff06b9);
@@ -96,7 +159,13 @@ const SubTitleLine = styled.hr`
   
 `;
 const SubTitle = styled.h3`
-@media (max-width:767px){
+ @media (max-width:767px){
+  margin-left: 20px;
+  font-family: Rubik;
+  font-size: 20px;
+  font-weight: 600;
+} 
+@media (min-width:768px){
   margin-left: 20px;
   font-family: Rubik;
   font-size: 20px;
@@ -105,68 +174,105 @@ const SubTitle = styled.h3`
   
 `;
 const DivContainerTitle = styled.div`
-  @media (max-width:767px){
+   @media (max-width:767px){
     height: 170px;
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  }
+  } 
+  @media (min-width:768px){
+    height: 170px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
   
 `;
 const Title = styled.h2`
-@media (max-width:767px){
+ @media (max-width:767px){
   margin-top: 40px;
   font-size: 34px;
   margin-bottom: 20px;
   line-height: 30px;
   margin-left: 10px;
+} 
+@media (min-width:768px){
+  margin-top: 40px;
+  font-size: 64px;
+  margin-bottom: 20px;
+  line-height: 60px;
+  margin-left: 20px;
 }
   
 `;
 
 const DivAbout = styled.div`
-@media (max-width:767px){
+ @media (max-width:767px){
   display: flex;
   text-align: center;
   justify-content: center;
   margin-right: 10px;
+} 
+@media (min-width:768px){
+  display: flex;
+  text-align: start;
+  margin-left: 20px;
+  width: 670px;
+  margin-top: 20px;
 }
-  
 `;
 const ParagraphSup = styled.p`
-@media (max-width:767px){
+ @media (max-width:767px){
   font-weight: 10px;
+} 
+@media (min-width:768px){
+ 
 }
-
 `;
 
 const DivInfo = styled.div`
-  @media (max-width:767px){
+   @media (max-width:767px){
     margin-top: 50px;
   display: flex;
   flex-direction: row;
-  }
-  
-`;
+  } 
+  @media (min-width:768px){
+    margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+  `;
 
 const HrInfo = styled.hr`
-@media (max-width:767px){
+ @media (max-width:767px){
   width: 39px;
   margin-left: 6px;
   background-image: linear-gradient(to bottom, #e2e70f, #ff06b9);
   height: 150px;
   border: none;
+} 
+@media (min-width:768px) {
+  width: 14px;
+  margin-left: 15px;
+  background-image: linear-gradient(to bottom, #e2e70f, #ff06b9);
+  height: 150px;
+  border: none;
 }
-  
 `;
 
 const ParagraphInf = styled.p`
-@media (max-width:767px){
+ @media (max-width:767px){
+  margin-left: 20px;
+  margin-right: 20px;
+} 
+@media (min-width:768px){
   margin-left: 20px;
   margin-right: 20px;
 }
-  
   
 
 
