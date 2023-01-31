@@ -8,6 +8,10 @@ const Div = styled.div`
     url(${rectanglecinco});
   background-size: cover;
   height: 600px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Hero = () => {
@@ -19,12 +23,3 @@ const Hero = () => {
   );
 };
 export default Hero;
-
-// <a href="#NombreID">enlace a NombreID</a>
-
-// <p id="NombreID" style={{ color: "black" }}>
-//   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-//   recusandae, fuga necessitatibus ipsam eveniet neque error nihil unde
-//   voluptatum doloribus totam aut, dolorem cupiditate repudiandae
-//   accusantium el
-// </p>
