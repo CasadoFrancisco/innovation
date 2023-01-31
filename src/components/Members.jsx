@@ -5,6 +5,13 @@ import image2 from '../assets/foto2.png';
 import image3 from '../assets/foto3.png';
 import image4 from '../assets/foto4.png';
 
+const Section = styled.section`
+	display: flex;
+	justify-content: center;
+`;
+const Container = styled.div`
+	max-width: 1200px;
+`;
 const TitleContainer = styled.div`
 	align-items: center;
 	display: flex;
@@ -28,6 +35,10 @@ const Subtitle = styled.h2`
 	letter-spacing: 0.0025em;
 	margin-bottom: 25px;
 	text-align: justified;
+
+	@media (min-width: 768px) {
+		font-size: 16px;
+	}
 `;
 const Title = styled.h3`
 	font-family: Rubik;
@@ -43,14 +54,39 @@ const MembersContainer = styled.div`
 	display: grid;
 	flex-direction: column;
 	gap: 10px;
-	grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+	grid-template-columns: repeat(1, 1fr);
 	justify-content: center;
 	padding: 8px;
+
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (min-width: 1024px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
 `;
 const Member = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+`;
+const Member2 = styled(Member)`
+	display: none;
+
+	@media (min-width: 767px) {
+		display: flex;
+	}
+`;
+const Member3 = styled(Member)`
+	display: none;
+
+	@media (min-width: 767px) {
+		display: flex;
+	}
+
+	@media (min-width: 1024px) {
+		display: none;
+	}
 `;
 const Image = styled.img`
 	height: 450px;
@@ -89,54 +125,56 @@ const SocialMedia = styled.div`
 
 export const Members = () => {
 	return (
-		<div>
-			<TitleContainer>
-				<Vector></Vector>
-				<Subtitle>Our Team</Subtitle>
-				<Title>MEET WITH PHLOX TEAM MEMBERS</Title>
-			</TitleContainer>
-			<MembersContainer>
-				<Member>
-					<Image src={image1} alt="Photo member" />
-					<Job>Founder and Thinker</Job>
-					<Name>Jack Mane</Name>
-					<SocialMedia>
-						<i className="fa-brands fa-twitter"></i>
-						<i className="fa-brands fa-pinterest"></i>
-						<i className="fa-brands fa-facebook"></i>
-					</SocialMedia>
-				</Member>
-				<Member>
-					<Image src={image2} alt="Photo member" />
-					<Job>Founder and Thinker</Job>
-					<Name>Jack Mane</Name>
-					<SocialMedia>
-						<i className="fa-brands fa-twitter"></i>
-						<i className="fa-brands fa-pinterest"></i>
-						<i className="fa-brands fa-facebook"></i>
-					</SocialMedia>
-				</Member>
-				<Member>
-					<Image src={image3} alt="Photo member" />
-					<Job>Founder and Thinker</Job>
-					<Name>Jack Mane</Name>
-					<SocialMedia>
-						<i className="fa-brands fa-twitter"></i>
-						<i className="fa-brands fa-pinterest"></i>
-						<i className="fa-brands fa-facebook"></i>
-					</SocialMedia>
-				</Member>
-				<Member>
-					<Image src={image4} alt="Photo member" />
-					<Job>Founder and Thinker</Job>
-					<Name>Jack Mane</Name>
-					<SocialMedia>
-						<i className="fa-brands fa-twitter"></i>
-						<i className="fa-brands fa-pinterest"></i>
-						<i className="fa-brands fa-facebook"></i>
-					</SocialMedia>
-				</Member>
-			</MembersContainer>
-		</div>
+		<Section>
+			<Container>
+				<TitleContainer>
+					<Vector></Vector>
+					<Subtitle>Our Team</Subtitle>
+					<Title>MEET WITH PHLOX TEAM MEMBERS</Title>
+				</TitleContainer>
+				<MembersContainer>
+					<Member>
+						<Image src={image1} alt="Photo member" />
+						<Job>Founder and Thinker</Job>
+						<Name>Jack Mane</Name>
+						<SocialMedia>
+							<i className="fa-brands fa-twitter"></i>
+							<i className="fa-brands fa-pinterest"></i>
+							<i className="fa-brands fa-facebook"></i>
+						</SocialMedia>
+					</Member>
+					<Member>
+						<Image src={image2} alt="Photo member" />
+						<Job>Founder and Thinker</Job>
+						<Name>Jack Mane</Name>
+						<SocialMedia>
+							<i className="fa-brands fa-twitter"></i>
+							<i className="fa-brands fa-pinterest"></i>
+							<i className="fa-brands fa-facebook"></i>
+						</SocialMedia>
+					</Member>
+					<Member2>
+						<Image src={image3} alt="Photo member" />
+						<Job>Founder and Thinker</Job>
+						<Name>Jack Mane</Name>
+						<SocialMedia>
+							<i className="fa-brands fa-twitter"></i>
+							<i className="fa-brands fa-pinterest"></i>
+							<i className="fa-brands fa-facebook"></i>
+						</SocialMedia>
+					</Member2>
+					<Member3>
+						<Image src={image4} alt="Photo member" />
+						<Job>Founder and Thinker</Job>
+						<Name>Jack Mane</Name>
+						<SocialMedia>
+							<i className="fa-brands fa-twitter"></i>
+							<i className="fa-brands fa-pinterest"></i>
+							<i className="fa-brands fa-facebook"></i>
+						</SocialMedia>
+					</Member3>
+				</MembersContainer>
+			</Container>
+		</Section>
 	);
 };
