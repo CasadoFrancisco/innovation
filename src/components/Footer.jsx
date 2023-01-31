@@ -2,12 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../assets/logo.png';
 
+const Section = styled.section`
+	display: flex;
+	justify-content: center;
+`;
+const Container = styled.div`
+	max-width: 1200px;
+`;
 const FooterContainer = styled.div`
 	grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
-	align-items: center;
+	align-items: start;
 	display: grid;
+	gap: 25px;
 	justify-content: center;
+	margin-top: 40px;
 	padding: 8px;
+
+	@media (min-width: 1024px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
 `;
 const Info = styled.div`
 	display: flex;
@@ -55,6 +68,10 @@ const Detail = styled.p`
 const SocialMedia = styled.div`
 	display: flex;
 	gap: 26px;
+
+	@media (min-width: 1024px) {
+		gap: 10px;
+	}
 `;
 const Button = styled.button`
 	background-color: rgba(174, 174, 174, 1);
@@ -71,6 +88,9 @@ const Button = styled.button`
 	}
 `;
 const Category = styled.div`
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	width: 100%;
 `;
 const Title = styled.span`
@@ -84,8 +104,8 @@ const Title = styled.span`
 	font-family: Rubik;
 	font-size: 24px;
 	font-weight: 700;
-	line-height: 70px;
 	letter-spacing: 0.0025em;
+	margin-bottom: 25px;
 	padding-left: 10px;
 	text-align: left;
 `;
@@ -139,6 +159,14 @@ const Form = styled.form`
 		background-color: #c4c4c4;
 		color: rgba(255, 230, 0, 1);
 	}
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+
+	@media (min-width: 1024px) {
+		display: flex;
+	}
 `;
 
 export const Footer = () => {
@@ -148,93 +176,98 @@ export const Footer = () => {
 	};
 
 	return (
-		<FooterContainer>
-			<Info>
-				<LogoContainer>
-					<Logo src={logo} alt="logo" />
-					<NameContainer>
-						<Name>Flutterwave</Name>
-						<Group>Phlox Group</Group>
-					</NameContainer>
-				</LogoContainer>
-				<Detail>
-					In a professional context it often happens that private or corporate
-					clients a publication to be made and presented with the actual content
-				</Detail>
-				<SocialMedia>
-					<Button>
-						<i className="fa-brands fa-facebook-f"></i>
-					</Button>
-					<Button>
-						<i className="fa-brands fa-twitter"></i>
-					</Button>
-					<Button>
-						<i className="fa-brands fa-linkedin-in"></i>
-					</Button>
-					<Button>
-						<i className="fa-brands fa-instagram"></i>
-					</Button>
-				</SocialMedia>
-			</Info>
-			<Category>
-				<Title>Useful Links</Title>
-				<ul>
-					<ListItem>
-						<i className="fa-sharp fa-solid fa-square"></i>
-						<a href="http://" target="_blank" rel="noopener noreferrer">
-							General Information For Users
-						</a>
-					</ListItem>
-					<ListItem>
-						<i className="fa-sharp fa-solid fa-square"></i>
-						<a href="http://" target="_blank" rel="noopener noreferrer">
-							Interactive Fairy Tales
-						</a>
-					</ListItem>
-					<ListItem>
-						<i className="fa-sharp fa-solid fa-square"></i>
-						<a href="http://" target="_blank" rel="noopener noreferrer">
-							Official Storybook Maker Website
-						</a>
-					</ListItem>
-					<ListItem>
-						<i className="fa-sharp fa-solid fa-square"></i>
-						<a href="http://" target="_blank" rel="noopener noreferrer">
-							Everyday Mathematics Links
-						</a>
-					</ListItem>
-				</ul>
-			</Category>
-			<Category>
-				<Title>Contact Us</Title>
-				<ul>
-					<ListItem>
-						<i className="fa-sharp fa-solid fa-square"></i>
-						<p>Address: 123 Ave, Lorem City, site Country, The World</p>
-					</ListItem>
-					<ListItem>
-						<i className="fa-sharp fa-solid fa-square"></i>
-						<p>Phone: +7 (212) 654-33-35</p>
-					</ListItem>
-					<ListItem>
-						<i className="fa-sharp fa-solid fa-square"></i>
-						<p>Email: Info@yourdomain.com</p>
-					</ListItem>
-				</ul>
-			</Category>
-			<Category>
-				<Title>Contact Us</Title>
-				<p>
-					Subscribe to our MailChimp newsletter and stay up to date with all
-					events coming straight in your mailbox:
-				</p>
-				<Form onSubmit={handlerForm}>
-					<input type="text" placeholder="Your email address" />
-					<button type="submit" onSubmit={handlerForm}>
-						<i className="fa-solid fa-angles-right"></i>
-					</button>
-				</Form>
-			</Category>
-		</FooterContainer>
+		<Section>
+			<Container>
+				<FooterContainer>
+					<Info>
+						<LogoContainer>
+							<Logo src={logo} alt="logo" />
+							<NameContainer>
+								<Name>Flutterwave</Name>
+								<Group>Phlox Group</Group>
+							</NameContainer>
+						</LogoContainer>
+						<Detail>
+							In a professional context it often happens that private or
+							corporate clients a publication to be made and presented with the
+							actual content
+						</Detail>
+						<SocialMedia>
+							<Button>
+								<i className="fa-brands fa-facebook-f"></i>
+							</Button>
+							<Button>
+								<i className="fa-brands fa-twitter"></i>
+							</Button>
+							<Button>
+								<i className="fa-brands fa-linkedin-in"></i>
+							</Button>
+							<Button>
+								<i className="fa-brands fa-instagram"></i>
+							</Button>
+						</SocialMedia>
+					</Info>
+					<Category>
+						<Title>Useful Links</Title>
+						<ul>
+							<ListItem>
+								<i className="fa-sharp fa-solid fa-square"></i>
+								<a href="http://" target="_blank" rel="noopener noreferrer">
+									General Information For Users
+								</a>
+							</ListItem>
+							<ListItem>
+								<i className="fa-sharp fa-solid fa-square"></i>
+								<a href="http://" target="_blank" rel="noopener noreferrer">
+									Interactive Fairy Tales
+								</a>
+							</ListItem>
+							<ListItem>
+								<i className="fa-sharp fa-solid fa-square"></i>
+								<a href="http://" target="_blank" rel="noopener noreferrer">
+									Official Storybook Maker Website
+								</a>
+							</ListItem>
+							<ListItem>
+								<i className="fa-sharp fa-solid fa-square"></i>
+								<a href="http://" target="_blank" rel="noopener noreferrer">
+									Everyday Mathematics Links
+								</a>
+							</ListItem>
+						</ul>
+					</Category>
+					<Category>
+						<Title>Contact Us</Title>
+						<ul>
+							<ListItem>
+								<i className="fa-sharp fa-solid fa-square"></i>
+								<p>Address: 123 Ave, Lorem City, site Country, The World</p>
+							</ListItem>
+							<ListItem>
+								<i className="fa-sharp fa-solid fa-square"></i>
+								<p>Phone: +7 (212) 654-33-35</p>
+							</ListItem>
+							<ListItem>
+								<i className="fa-sharp fa-solid fa-square"></i>
+								<p>Email: Info@yourdomain.com</p>
+							</ListItem>
+						</ul>
+					</Category>
+					<Category>
+						<Title>Contact Us</Title>
+						<p>
+							Subscribe to our MailChimp newsletter and stay up to date with all
+							events coming straight in your mailbox:
+						</p>
+						<Form onSubmit={handlerForm}>
+							<input type="text" placeholder="Your email address" />
+							<button type="submit" onSubmit={handlerForm}>
+								<i className="fa-solid fa-angles-right"></i>
+							</button>
+						</Form>
+					</Category>
+				</FooterContainer>
+			</Container>
+		</Section>
 	);
 };
