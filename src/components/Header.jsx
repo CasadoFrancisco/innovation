@@ -3,13 +3,13 @@ import styled from "styled-components";
 const Div = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 0px;
   gap: 15.94px;
   position: absolute;
-  width: 399.13px;
-  height: 290.07px;
-  left: 14.22px;
+  width: 350px;
+  height: 300px;
   top: 122px;
 `;
 
@@ -17,14 +17,16 @@ const DivC = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 6.64114px 6.64114px 6.64114px 42.5033px;
+  justify-content: flex-start;
+  /* padding: 6.64114px 6.64114px 6.64114px 42.5033px; */
   gap: 10.63px;
-  width: 399.13px;
+  /* width: 399.13px; */
+  width: 90%;
   height: 94.97px;
 `;
 
 const P = styled.p`
-  width: 399.13px;
+  width: 90%;
   height: ${({ height }) => height || "76px"};
   font-family: "Rubik";
   font-style: normal;
@@ -33,6 +35,7 @@ const P = styled.p`
   line-height: ${({ lineHeight }) => lineHeight || "76px"};
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #ffffff;
   text-align: justify;
 `;

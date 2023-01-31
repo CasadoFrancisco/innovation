@@ -14,13 +14,9 @@ export const Logo = styled.img`
 
 const BotonMenu = styled.div`
   position: absolute;
-  left: 15%;
-  right: 15%;
-  top: 20%;
-  bottom: 20%;
   width: 24px;
   height: 24px;
-  left: 370px;
+  left: 85%;
   top: 38px;
   background-image: url(${menu});
   background-size: 24px;
@@ -38,18 +34,19 @@ const Nav = styled.nav`
   align-items: center;
   padding: 0px;
   gap: 10px;
-  width: 366px;
+  width: 100vw;
   height: 33px;
   
   @media (max-width: 767px) {
     transform: translateY(${ props => props.isOpen ? "0vh" : "-100vh" });
     transition: 0.5s;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     gap: 1.5rem;
+    left: 0;
     background-color: #000000e1;
-    position: fixed;
+    position: absolute;
     z-index: 1;
   }
 `;
