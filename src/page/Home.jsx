@@ -1,7 +1,9 @@
+import Body from "../components/Body"
+
 const Home = () => {
   return (
     <div>
-        DevBees
+    <Body/>
     </div>
   )
 }
