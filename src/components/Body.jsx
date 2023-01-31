@@ -46,7 +46,6 @@ const DivImag = styled.div`
  @media (max-width:767px){
   display: flex;
   justify-content: flex-start;
-  
   position: relative;
   width: 100vw;
   height: 530px;
